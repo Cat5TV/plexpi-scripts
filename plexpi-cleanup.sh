@@ -20,4 +20,4 @@
   rm .nano_history
   rm .bash_history
 
-#halt
+halt
