@@ -16,7 +16,7 @@
 
  # Clearing History
   rm -rf /root/.nano
-  rm -rf /home/nemsadmin/.nano
+  rm -rf /home/pi/.nano
 
   cd /root
   rm .nano_history
