@@ -30,4 +30,5 @@
   rm .nano_history
   rm .bash_history
 
+  sync
 halt
