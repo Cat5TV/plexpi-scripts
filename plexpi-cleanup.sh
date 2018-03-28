@@ -1,10 +1,13 @@
 #!/bin/bash
 
  # Create PlexPi Config
+  systemctl stop plexmediaserver
   if [[ ! -d /etc/systemd/system/plexmediaserver.service.d ]]; then
     mkdir /etc/systemd/system/plexmediaserver.service.d
   fi
   wget -O /etc/systemd/system/plexmediaserver.service.d/override.conf https://raw.githubusercontent.com/Cat5TV/plexpi-scripts/master/conf/override.conf
+  systemctl daemon-reload
+  systemctl start plexmediaserver
 
  # Enable Firstboot Auto Resize
   if grep -q "rootwait quiet splash" /boot/cmdline.txt; then
