@@ -6,6 +6,7 @@
     mkdir /etc/systemd/system/plexmediaserver.service.d
   fi
   wget -O /etc/systemd/system/plexmediaserver.service.d/override.conf https://raw.githubusercontent.com/Cat5TV/plexpi-scripts/master/conf/override.conf
+  rm -rf /var/lib/plexmediaserver
   systemctl daemon-reload
   systemctl start plexmediaserver
 exit
